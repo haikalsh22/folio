@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html style="background-color:#D3D3D3;">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resume - My Past Project</title>
+    <link rel="stylesheet" href="layoutstyle.css" type="text/css">
+    <script>
+        function dragstartHandler(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function dragoverHandler(ev) {
+            ev.preventDefault();
+        }
+
+        function dropHandler(ev) {
+            ev.preventDefault();
+            const data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h1>Welcome to My Past Project</h1>
+        </div>
+
+        <hr style="width: 100%; height: 2px;">
+
+        <div id="navigation">
+            <ul>
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="project.html">Past Project</a></li>
+                <li><a href="jsproject.html">JavaScript Project</a></li>
+            </ul>
+        </div>
+
+        <div id="content-container">
+            <div id="main">
+                <h2>My Canvas Project</h2>
+                <ol>
+                    <li>Canvas - Shape</li>
+                    <canvas id="canvas1" width="200" height="150" style="border:1px solid #000000;"></canvas>
+
+                    <li>Canvas - Text</li>
+                    <canvas id="canvas2" width="250" height="150" style="border:1px solid #000000;"></canvas>
+
+                    <li>Canvas - Clock</li>
+                    <canvas id="canvas" width="200" height="200" style="background-color:#0073ff"></canvas>
+
+                    <li>My PDF</li>
+                    <object data="image/Lab1_HTML (4).pdf" width="500px" height="350px"></object>
+                </ol>
+
+                <script>
+                    // Canvas 1
+                    const canvas1 = document.getElementById("canvas1");
+                    const ctx1 = canvas1.getContext("2d");
+                    ctx1.rect(50, 50, 100, 80);
+                    ctx1.stroke();
+
+                    // Canvas 2
+                    const canvas2 = document.getElementById("canvas2");
+                    const ctx2 = canvas2.getContext("2d");
+                    ctx2.font = "20px Arial";
+                    ctx2.strokeText("Haikal Yut", 30, 80);
+
+                    // Canvas Clock
+                    const canvas = document.getElementById("canvas");
+                    const ctx = canvas.getContext("2d");
+                    let radius = canvas.height / 2;
+                    ctx.translate(radius, radius);
+                    radius = radius * 0.90;
+
+                    function drawClock() {
+                        drawFace(ctx, radius);
+                        drawNumbers(ctx, radius);
+                        drawTime(ctx, radius);
+                    }
+
+                    function drawFace(ctx, radius) {
+                        const grad = ctx.createRadialGradient(0, 0, radius * 0.95, 0, 0, radius * 1.05);
+                        grad.addColorStop(0, '#80a352');
+                        grad.addColorStop(0.5, 'white');
+                        grad.addColorStop(1, '#333');
+
+                        ctx.beginPath();
+                        ctx.arc(0, 0, radius, 0, 2 * Math.PI);
+                        ctx.fillStyle = 'white';
+                        ctx.fill();
+
+                        ctx.strokeStyle = grad;
+                        ctx.lineWidth = radius * 0.1;
+                        ctx.stroke();
+
+                        ctx.beginPath();
+                        ctx.arc(0, 0, radius * 0.1, 0, 2 * Math.PI);
+                        ctx.fillStyle = '#333';
+                        ctx.fill();
+                    }
+
+                    function drawNumbers(ctx, radius) {
+                        ctx.font = radius * 0.15 + "px arial";
+                        ctx.textBaseline = "middle";
+                        ctx.textAlign = "center";
+                        for (let num = 1; num <= 12; num++) {
+                            let ang = num * Math.PI / 6;
+                            ctx.rotate(ang);
+                            ctx.translate(0, -radius * 0.85);
+                            ctx.rotate(-ang);
+                            ctx.fillText(num.toString(), 0, 0);
+                            ctx.rotate(ang);
+                            ctx.translate(0, radius * 0.85);
+                            ctx.rotate(-ang);
+                        }
+                    }
+
+                    function drawTime(ctx, radius) {
+                        const now = new Date();
+                        let hour = now.getHours();
+                        let minute = now.getMinutes();
+                        let second = now.getSeconds();
+
+                        hour = hour % 12;
+                        hour = (hour * Math.PI / 6) +
+                            (minute * Math.PI / (6 * 60)) +
+                            (second * Math.PI / (360 * 60));
+                        drawHand(ctx, hour, radius * 0.5, radius * 0.07);
+
+                        minute = (minute * Math.PI / 30) +
+                            (second * Math.PI / (30 * 60));
+                        drawHand(ctx, minute, radius * 0.8, radius * 0.07);
+
+                        second = (second * Math.PI / 30);
+                        drawHand(ctx, second, radius * 0.9, radius * 0.02);
+                    }
+
+                    function drawHand(ctx, pos, length, width) {
+                        ctx.beginPath();
+                        ctx.lineWidth = width;
+                        ctx.lineCap = "round";
+                        ctx.moveTo(0, 0);
+                        ctx.rotate(pos);
+                        ctx.lineTo(0, -length);
+                        ctx.stroke();
+                        ctx.rotate(-pos);
+                    }
+
+                    setInterval(drawClock, 1000);
+                </script>
+            </div>
+
+            <div id="side">
+                <h2>My SVG & Multimedia Projects</h2>
+                <ol start="5">
+                    <li>SVG Text</li>
+                    <svg height="40" width="400">
+                        <text x="5" y="30" fill="orange" stroke="red" font-size="35">FINE SHYT</text>
+                    </svg>
+
+                    <li>SVG Circle - Archery Target Board</li>
+                    <svg height="100" width="100">
+                        <circle r="45" cx="50" cy="50" fill="red" stroke="black" stroke-width="2" />
+                        <circle r="25" cx="50" cy="50" fill="blue" stroke="black" stroke-width="2" />
+                        <circle r="13" cx="50" cy="50" fill="yellow" stroke="black" stroke-width="1" />
+                    </svg>
+
+                    <li>SVG Rectangle - Box inside box</li>
+                    <svg height="100" width="200" style="background-color:#534d4d">
+                        <rect width="150" height="70" x="20" y="15"
+                            style="fill:rgb(0, 0, 255); stroke-width:3;stroke:red" />
+                    </svg>
+
+                    <li>SVG Text from <a href="https://maketext.io/" target="_blank">maketext.io</a></li>
+                    <svg height="200" width="300">
+                        <image height="200" width="300" href="image/Anomali.svg" />
+                    </svg>
+
+                    <li>My MP4 Video</li>
+                    <video width="200" height="320" controls>
+                        <source src="vid/Jagoan.mp4" type="video/mp4">
+                    </video>
+
+                    <li>My MP3 Audio</li>
+                    <audio controls>
+                        <source src="vid/assalamu-alayka-maher-zain.mp3" type="audio/mpeg">
+                    </audio>
+
+                    <li>My YouTube Video</li>
+                    <iframe width="360" height="315"
+                        src="https://www.youtube.com/embed/AwW8s_r4g4w?si=GRwKGX1rUl7fSQsa" frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+
+                    <li>Drag and Drop</li>
+                    <div id="div1" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"
+                        style="width:300px;height:250px;border:1px solid black;background-color:white;"></div>
+                    <br>
+                    <img id="img1" src="image/Boom.gif" draggable="true" ondragstart="dragstartHandler(event)"
+                        width="262" height="230">
+                </ol>
+            </div>
+        </div>
+
+        <div id="footer">
+            Copyright Haikal, 2025
+        </div>
+    </div>
+</body>
+
+</html>
