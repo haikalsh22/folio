@@ -4,12 +4,62 @@
     <meta charset="UTF-8">
     <title>Resume | Activities</title>
     <link rel="stylesheet" href="layoutstyle.css" type="text/css">
+    <style>
+        /* Optional: enhance styles locally */
+        table {
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        td ul {
+            padding-left: 20px;
+        }
+
+        aside ul li {
+            margin-bottom: 10px;
+        }
+
+        aside ul li::marker {
+            color: #0d6efd;
+        }
+
+        aside {
+            background-color: #f8f9fa;
+            border-left: 5px solid #0d6efd;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        aside h3 {
+            color: #0d6efd;
+        }
+
+        @media (max-width: 768px) {
+            table, thead, tbody, th, td {
+                display: block;
+            }
+
+            thead {
+                display: none;
+            }
+
+            td {
+                margin-bottom: 15px;
+                border: none;
+            }
+        }
+    </style>
 </head>
 <body>
     <div id="wrapper"> 
         <!-- Header -->
         <header id="header"> 
-            <h1>Activities</h1>
+            <h1>Co-Curricular Activities</h1>
         </header>
 
         <!-- Navigation -->
@@ -26,30 +76,55 @@
             </ul>
         </nav>
 
-        <!-- Content Container -->
+        <!-- Content -->
         <div id="content-container">
             <main id="main">
-                <h2>My Activity Details</h2>
-                <table border="1" cellpadding="10" cellspacing="0" style="width:100%; border-collapse: collapse;">
-                    <thead style="background-color:#eee;">
+                <h2>Key Activities & Achievements</h2>
+                <p>Here are some activities that helped me develop soft skills, leadership, and teamwork as a 20-year-old student:</p>
+
+                <table cellpadding="10" cellspacing="0" style="width:100%; border-collapse: collapse;">
+                    <thead>
                         <tr>
-                            <th>Location</th>
+                            <th>Institution / Location</th>
                             <th>Activities</th>
-                            <th>Achievement</th>
+                            <th>Achievements / Roles</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Johor Matriculation College</td>
+                            <td>Johor Matriculation College (KMJ)</td>
                             <td>
                                 <ul>
-                                    <li>Active in Recreational Club Curriculum</li>
-                                    <li>Volunteer crew for KMJ Sports Tournament</li>
-                                    <li>Volunteer in Aspirasi Kecemerlangan Keluarga Malaysia Program</li>
-                                    <li>Emcee for Pertandingan Da'i KMJ</li>
+                                    <li>Recreational Club Member</li>
+                                    <li>Volunteer: KMJ Sports Tournament</li>
+                                    <li>Emcee: Da’i Competition</li>
+                                    <li>Volunteer: Aspirasi Kecemerlangan Keluarga Malaysia Program</li>
                                 </ul>
                             </td>
-                            <td><strong>President of JAPPIM (July 2023 – May 2024)</strong></td>
+                            <td><strong>President of JAPPIM (2023–2024)</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Community Events</td>
+                            <td>
+                                <ul>
+                                    <li>Gotong-royong cleanup in Pasir Gudang</li>
+                                    <li>Tree planting with Program Hijaukan Bumi Kita</li>
+                                    <li>Volunteer: Hari Kokurikulum and STEM Carnival</li>
+                                </ul>
+                            </td>
+                            <td>Team Leader & Facilitator</td>
+                        </tr>
+                        <tr>
+                            <td>UTeM & National</td>
+                            <td>
+                                <ul>
+                                    <li>Hackathon Belia Malaysia 2024</li>
+                                    <li>Cybersecurity Awareness Week (organizing crew)</li>
+                                    <li>MDEC eUsahawan – Digital Ambassador</li>
+                                    <li>Basic First Aid certified (St. John Ambulance)</li>
+                                </ul>
+                            </td>
+                            <td>Top 10 Hackathon Finalist</td>
                         </tr>
                     </tbody>
                 </table>
@@ -57,24 +132,13 @@
 
             <!-- Sidebar -->
             <aside id="side">
-                <h3>Other Activities</h3>
-                <p>As a 20-year-old student, I’ve taken part in various activities that helped me grow personally and professionally:</p>
+                <h3>Other Highlights</h3>
                 <ul>
-                    <li>I joined <strong>Kelab Rukun Negara</strong> in college to promote unity and patriotism among students.</li>
-                    <li>Volunteered in a <strong>gotong-royong</strong> program organized by the local municipality to clean a park in Pasir Gudang.</li>
-                    <li>Took part in the <strong>Merdeka Day Parade</strong> at Johor Bahru with my college mates — it was such a proud moment!</li>
-                    <li>Attended <strong>Kursus Kepimpinan Pelajar</strong> by KPM to strengthen my leadership and communication skills.</li>
-                    <li>Helped distribute food for <strong>Food Bank Malaysia</strong> during semester breaks as part of our community service effort.</li>
-                    <li>Joined <strong>Karnival STEM Malaysia</strong> and developed a simple IoT smart home system with friends.</li>
-                    <li>Volunteered during <strong>Hari Kokurikulum</strong> to manage activity booths and guide younger students.</li>
-                    <li>Joined <strong>Program Khidmat Masyarakat</strong> at a local orphanage where we held fun and educational games.</li>
-                    <li>Completed <strong>Basic First Aid Training</strong> with St. John Ambulance – I now feel more confident handling emergencies.</li>
-                    <li>Helped organize a <strong>Cybersecurity Awareness Week</strong> at our faculty to educate others about online safety.</li>
-                    <li>Competed in <strong>Hackathon Belia Malaysia 2024</strong> where my team built a mental health tracker app.</li>
-                    <li>Contributed book reviews to the <strong>NILAM reading program</strong> and supported our campus library.</li>
-                    <li>Planted trees as part of <strong>Program Hijaukan Bumi Kita</strong> — I care deeply about the environment.</li>
-                    <li>Represented my school in <strong>Bahas Ala Parlimen</strong> — it sparked my interest in public speaking.</li>
-                    <li>Acted as a <strong>Digital Ambassador</strong> under MDEC’s <strong>eUsahawan program</strong> helping micro-businesses go online.</li>
+                    <li>Marched with my classmates in the <strong>Merdeka Day Parade</strong> at Johor Bahru — unforgettable moment of patriotism.</li>
+                    <li>Participated in <strong>Bahas Ala Parlimen</strong> in secondary school — that sparked my love for public speaking.</li>
+                    <li>Joined <strong>Kursus Kepimpinan Pelajar</strong> by KPM to develop leadership and time management skills.</li>
+                    <li>Distributed aid during the <strong>Food Bank Malaysia</strong> community drive in my hometown during semester break.</li>
+                    <li>Contributed to <strong>NILAM reading program</strong> by writing book reviews to help juniors explore reading.</li>
                 </ul>
             </aside>
         </div>
