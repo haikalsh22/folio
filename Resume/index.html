@@ -6,30 +6,57 @@
     <link rel="stylesheet" href="layoutstyle.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* Optional: Toggle button styling */
         .theme-toggle {
-            background-color: #00c3ff;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+            padding: 10px 20px;
+            background-color: #333;
             color: #fff;
             border: none;
-            padding: 8px 16px;
-            font-size: 0.9em;
-            cursor: pointer;
             border-radius: 5px;
-            margin-top: 10px;
-            transition: background 0.3s ease;
+            cursor: pointer;
+            font-size: 14px;
         }
 
-        .theme-toggle:hover {
-            background-color: #009ccf;
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode #wrapper {
+            background-color: #1e1e1e;
+            box-shadow: none;
+        }
+
+        body.dark-mode #header,
+        body.dark-mode #navigation,
+        body.dark-mode #footer {
+            background-color: #222;
+        }
+
+        body.dark-mode #navigation li a {
+            color: #ccc;
+            border-right: 1px solid #444;
+        }
+
+        body.dark-mode #navigation li a:hover {
+            background-color: #555;
+        }
+
+        body.dark-mode #side {
+            background-color: #2b2b2b;
+            border-left: 2px solid #444;
         }
     </style>
 </head>
 <body>
+    <button class="theme-toggle" id="themeToggle">Toggle Theme</button>
     <div id="wrapper">
         <!-- Header -->
         <header id="header">
             <h1>About Me</h1>
-            <button id="themeToggle" class="theme-toggle">Switch Theme</button>
         </header>
 
         <!-- Navigation -->
@@ -90,30 +117,10 @@
             &copy; 2025 Muhammad Haikal. All rights reserved.
         </footer>
     </div>
-
-    <!-- Theme Toggle Script -->
     <script>
-        const toggleBtn = document.getElementById('themeToggle');
-        const body = document.body;
-
-        // Apply saved theme
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            body.classList.add(savedTheme);
-        } else {
-            body.classList.add('light-mode'); // default
-        }
-
-        toggleBtn.addEventListener('click', () => {
-            if (body.classList.contains('light-mode')) {
-                body.classList.remove('light-mode');
-                body.classList.add('dark-mode');
-                localStorage.setItem('theme', 'dark-mode');
-            } else {
-                body.classList.remove('dark-mode');
-                body.classList.add('light-mode');
-                localStorage.setItem('theme', 'light-mode');
-            }
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
         });
     </script>
 </body>
