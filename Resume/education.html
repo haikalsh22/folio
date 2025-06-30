@@ -1,17 +1,21 @@
-<html><head>
-    <title>Resume</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume | Education</title>
     <link rel="stylesheet" href="layoutstyle.css" type="text/css">
-    
-    </head><body>
-        <div id="wrapper"> 
-        <div id="header"> 
-        <h1>Education</h1>
-        </div>
-        </div>
-    <hr style="width: 100%; height: 2px;">
-        <div id="navigation">
-                <ul>
-                <li><a href="index.html">About me</a></li>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Header -->
+        <header id="header">
+            <h1>Education</h1>
+        </header>
+
+        <!-- Navigation -->
+        <nav id="navigation">
+            <ul>
+                <li><a href="index.html">About Me</a></li>
                 <li><a href="education.html">Education</a></li>
                 <li><a href="experience.html">Experience</a></li>
                 <li><a href="skills.html">Skills</a></li>
@@ -20,15 +24,51 @@
                 <li><a href="project.html">Past Project</a></li>
                 <li><a href="jsproject.html">JavaScript Project</a></li>
             </ul>
-        </div>
- <h2>My Education Background:</h2>
+        </nav>
 
- <table border="1" style="text-align:center">
-    <tr><td>School/Institude</td><td>Level</td><td>Year</td></tr>
-    <tr><td>UTem<img src="image/UTem Logo.jpg" width = "300"></td><td>Bancheler Degree</td><td>2024-2027</td></tr> 
-    <tr><td>Johor Matriculation College<img src="image/KMJ_Logo.png" width = "200"></td><td>Pre-University</td><td>2023-2024</td></tr>
-    <tr><td>Sekolah Menengah Kebangsaan Pasir Gudang 3<img src="image/PG3.jpg" width = "100"></td><td>Highschool</td><td>2018-2023</td></tr>
-    <tr><td>Sekolah Kebangsaan Pasir Gudang 1</td><td>Primary School</td><td>2012-2017</td></tr>
-</table>
+        <!-- Main Content -->
+        <main id="main">
+            <h2>My Education Background:</h2>
+            <table border="1" cellpadding="10" cellspacing="0" style="width:100%; border-collapse: collapse; text-align: center;">
+                <thead style="background-color:#f0f0f0;">
+                    <tr>
+                        <th>School/Institution</th>
+                        <th>Level</th>
+                        <th>Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            UTeM<br>
+                            <img src="image/UTem Logo.jpg" alt="UTeM Logo" width="200">
+                        </td>
+                        <td>Bachelor's Degree</td>
+                        <td>2024 - 2027</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Johor Matriculation College (KMJ)<br>
+                            <img src="image/KMJ_Logo.png" alt="KMJ Logo" width="150">
+                        </td>
+                        <td>Pre-University</td>
+                        <td>2023 - 2024</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            SMK Pasir Gudang 3<br>
+                            <img src="image/PG3.jpg" alt="SMK PG3 Logo" width="100">
+                        </td>
+                        <td>High School</td>
+                        <td>2018 - 2023</td>
+                    </tr>
+                    <tr>
+                        <td>Sekolah Kebangsaan Pasir Gudang 1</td>
+                        <td>Primary School</td>
+                        <td>2012 - 2017</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
 
-</body></html>
+        <!-- Footer -->
