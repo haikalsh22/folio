@@ -5,54 +5,8 @@
     <title>Resume | About Me</title>
     <link rel="stylesheet" href="layoutstyle.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .theme-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 9999;
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        body.dark-mode {
-            background-color: #121212;
-            color: #e0e0e0;
-        }
-
-        body.dark-mode #wrapper {
-            background-color: #1e1e1e;
-            box-shadow: none;
-        }
-
-        body.dark-mode #header,
-        body.dark-mode #navigation,
-        body.dark-mode #footer {
-            background-color: #222;
-        }
-
-        body.dark-mode #navigation li a {
-            color: #ccc;
-            border-right: 1px solid #444;
-        }
-
-        body.dark-mode #navigation li a:hover {
-            background-color: #555;
-        }
-
-        body.dark-mode #side {
-            background-color: #2b2b2b;
-            border-left: 2px solid #444;
-        }
-    </style>
 </head>
 <body>
-    <button class="theme-toggle" id="themeToggle">Toggle Theme</button>
     <div id="wrapper">
         <!-- Header -->
         <header id="header">
@@ -117,11 +71,5 @@
             &copy; 2025 Muhammad Haikal. All rights reserved.
         </footer>
     </div>
-    <script>
-        const themeToggle = document.getElementById('themeToggle');
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-        });
-    </script>
 </body>
 </html>
