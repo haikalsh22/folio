@@ -1,47 +1,114 @@
-<html><head>
-    <title>Resume </title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume | Skills</title>
     <link rel="stylesheet" href="layoutstyle.css" type="text/css">
-</head><body>
-        <div id="wrapper"> 
+    <style>
+        /* Extra styles to enhance appearance */
+        .skill-section {
+            margin-bottom: 30px;
+        }
+
+        .skill-section h3 {
+            background-color: #0d6efd;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 15px;
+        }
+
+        .badge {
+            padding: 8px 15px;
+            background-color: #f0f0f0;
+            border-radius: 20px;
+            font-weight: bold;
+            box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .badge:hover {
+            background-color: #e0e0e0;
+            transform: scale(1.05);
+        }
+
+        /* Different colors for each category */
+        .software .badge { background-color: #e3f2fd; }
+        .hardware .badge { background-color: #ffe0b2; }
+        .language .badge { background-color: #dcedc8; }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper"> 
         <div id="header"> 
-    <h1>Skills</h1>
-            </div>
-            </div>
-     <hr style="width: 100%; height: 2px;">
-            <div id="navigation">
+            <h1>Skills</h1>
+        </div>
+    </div>
+
+    <hr style="width: 100%; height: 2px;">
+
+    <div id="navigation">
         <ul>
-                <li><a href="index.html">About Me</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="activities.html">Activities</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="past project.html">Past Project</a></li>
-                <li><a href="jsproject.html">JavaScript Project</a></li>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="project.html">Past Project</a></li>
+            <li><a href="jsproject.html">JavaScript Project</a></li>
         </ul>
-            </div>
-        <h2>This is my skills details:</h2>
-        <ol>
-            <p><li><b>Software</b></li>
-                <ul>
-                    <li>Microsoft Office 365</li>
-                    <li>PuTTY</li>
-                    <li>MySQL</li>
-                    <li>VirtualBox</li>
-                    <li>Packet Tracer</li>
-                </ul> </p>
-                <li><b>Hardware</b></li>
-                <ul>
-                    <li>Microsoft Windows PC</li>
-                    <li>Cisco Catalyst 2960 Switch</li>
-                    <li>Cisco Router</li>
-                    <li>Cisco ASA 5500-X</li>
-                </ul>
-                <p><li><b>Language</b></li>
-                    <ul>
-                        <li>Bahasa Malaysia</li>
-                        <li>English</li>
-                        <li>German</li>
-                        <li>Mandarin</li>
-                    </ul> </p>
-        </ol>
+    </div>
+
+    <div id="content-container">
+        <main id="main">
+            <h2>These are my core skill sets:</h2>
+
+            <!-- Software -->
+            <section class="skill-section software">
+                <h3>Software Tools</h3>
+                <div class="skills-list">
+                    <span class="badge">Microsoft Office 365</span>
+                    <span class="badge">PuTTY</span>
+                    <span class="badge">MySQL</span>
+                    <span class="badge">VirtualBox</span>
+                    <span class="badge">Packet Tracer</span>
+                </div>
+            </section>
+
+            <!-- Hardware -->
+            <section class="skill-section hardware">
+                <h3>Hardware Familiarity</h3>
+                <div class="skills-list">
+                    <span class="badge">Windows PC</span>
+                    <span class="badge">Cisco Catalyst 2960</span>
+                    <span class="badge">Cisco Routers</span>
+                    <span class="badge">Cisco ASA 5500-X</span>
+                </div>
+            </section>
+
+            <!-- Language -->
+            <section class="skill-section language">
+                <h3>Languages</h3>
+                <div class="skills-list">
+                    <span class="badge">Bahasa Malaysia</span>
+                    <span class="badge">English</span>
+                    <span class="badge">German</span>
+                    <span class="badge">Mandarin</span>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer id="footer">
+        &copy; 2025 Haikal. All rights reserved.
+    </footer>
+</body>
+</html>
