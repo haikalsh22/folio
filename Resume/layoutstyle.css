@@ -148,26 +148,7 @@ svg {
     font-size: 0.9em;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    #content-container {
-        flex-direction: column;
-    }
-
-    #main, #side {
-        flex: 1 1 100%;
-        margin-left: 0;
-    }
-
-    #navigation ul {
-        flex-direction: column;
-    }
-
-    #navigation li a {
-        border-right: none;
-        border-bottom: 1px solid #555;
-    }
-    /* Company Logo Styling */
+/* Company Logo Styling */
 .logo-wrapper {
     display: flex;
     flex-direction: column;
@@ -201,4 +182,23 @@ svg {
     font-weight: 500;
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+    #content-container {
+        flex-direction: column;
+    }
+
+    #main, #side {
+        flex: 1 1 100%;
+        margin-left: 0;
+    }
+
+    #navigation ul {
+        flex-direction: column;
+    }
+
+    #navigation li a {
+        border-right: none;
+        border-bottom: 1px solid #555;
+    }
 }
