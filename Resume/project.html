@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color:#D3D3D3;">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Resume - My Past Project</title>
@@ -42,34 +42,34 @@
             </ul>
         </nav>
 
-        <!-- Main Content -->
+        <!-- Content -->
         <div id="content-container">
-            <!-- Left Main -->
+            <!-- Main Section -->
             <main id="main">
                 <section>
                     <h2>Canvas Projects</h2>
                     <ol>
                         <li>
                             <strong>Canvas - Shape</strong><br>
-                            <canvas id="canvas1" width="200" height="150" style="border:1px solid #000"></canvas>
+                            <canvas id="canvas1" width="200" height="150" class="bordered-canvas"></canvas>
                         </li>
                         <li>
                             <strong>Canvas - Text</strong><br>
-                            <canvas id="canvas2" width="250" height="150" style="border:1px solid #000"></canvas>
+                            <canvas id="canvas2" width="250" height="150" class="bordered-canvas"></canvas>
                         </li>
                         <li>
                             <strong>Canvas - Clock</strong><br>
-                            <canvas id="canvas" width="200" height="200" style="background-color:#0073ff;"></canvas>
+                            <canvas id="canvas" width="200" height="200"></canvas>
                         </li>
                         <li>
-                            <strong>My Last Semester Project (DOCX)</strong><br>
-                            <object data="image/PROJECT REPORT_GROUP1.pdf" width="500px" height="350px"></object>
+                            <strong>My Last Semester Project (PDF)</strong><br>
+                            <object data="image/PROJECT REPORT_GROUP1.pdf" width="500" height="350"></object>
                         </li>
                     </ol>
                 </section>
             </main>
 
-            <!-- Right Sidebar -->
+            <!-- Sidebar -->
             <aside id="side">
                 <section>
                     <h2>SVG & Multimedia Projects</h2>
@@ -90,7 +90,7 @@
                         </li>
                         <li>
                             <strong>SVG Box</strong><br>
-                            <svg height="100" width="200" style="background-color:#534d4d">
+                            <svg height="100" width="200" class="svg-box">
                                 <rect width="150" height="70" x="20" y="15"
                                     style="fill:blue; stroke-width:3;stroke:red" />
                             </svg>
@@ -120,8 +120,9 @@
                         </li>
                         <li>
                             <strong>Drag and Drop</strong><br>
-                            <div id="div1" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"
-                                style="width:300px;height:250px;border:1px solid black;background-color:white;"></div>
+                            <div id="div1" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
+                                Drop Image Here
+                            </div>
                             <br>
                             <img id="img1" src="image/Boom.gif" draggable="true" ondragstart="dragstartHandler(event)"
                                 width="262" height="230" alt="Draggable Image">
@@ -209,8 +210,8 @@
 
             hour %= 12;
             hour = (hour * Math.PI / 6) +
-                (minute * Math.PI / (6 * 60)) +
-                (second * Math.PI / (360 * 60));
+                   (minute * Math.PI / (6 * 60)) +
+                   (second * Math.PI / (360 * 60));
             drawHand(ctx, hour, radius * 0.5, radius * 0.07);
 
             minute = (minute * Math.PI / 30) + (second * Math.PI / (30 * 60));
