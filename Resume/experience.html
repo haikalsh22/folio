@@ -1,15 +1,19 @@
-<html><head>
-    <title>Resume </title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume | Experience</title>
     <link rel="stylesheet" href="layoutstyle.css" type="text/css">
-</head><body>
-        <div id="wrapper"> 
-        <div id="header"> 
-    <h1>Experience</h1>
-        </div>
-        </div>
-    
-    <hr style="width: 100%; height: 2px;">
-        <div id="navigation">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Header -->
+        <header id="header">
+            <h1>Experience</h1>
+        </header>
+
+        <!-- Navigation -->
+        <nav id="navigation">
             <ul>
                 <li><a href="index.html">About Me</a></li>
                 <li><a href="education.html">Education</a></li>
@@ -20,45 +24,51 @@
                 <li><a href="project.html">Past Project</a></li>
                 <li><a href="jsproject.html">JavaScript Project</a></li>
             </ul>
-        </div>
-        <h2>This is my experience details:</h2>
-        <ol>
-            <p>
-                <fieldset>
-                <li><strong>   Pizza Hut Malaysia</strong>
-                <br> Pizza Hut Delivery Dahlia</li>
+        </nav>
+
+        <!-- Main Content -->
+        <main id="main">
+            <h2>This is my experience details:</h2>
+
+            <section class="experience-entry">
+                <h3>Pizza Hut Malaysia</h3>
+                <p><strong>Branch:</strong> Pizza Hut Delivery Dahlia</p>
                 <ul>
                     <li>Customer Service</li>
                     <li>Food Preparation</li>
-                    <li>Cleaning and Maintainance</li>
+                    <li>Cleaning and Maintenance</li>
                     <li>Delivery</li>
                     <li>Cashier</li>
                 </ul>
-            <p>
-                    <li><strong>JNT</strong>
-                    <br>JNT Scientex</li>
-                    <ul>
-                        <li>Customer Service</li>
-                        <li>Item Preparation</li>
-                        <li>SCanning</li>
-                        <li>Delivery</li>
-                       
-                    </ul>
-                <p>
-                        <li><strong>MASIMO</strong>
-                        <br>MASIMO Pasir Gudnag</li>
-                        <ul>
-                            <li>Operator</li>                            
-                        </ul>
-                    </fieldset>
-                        <div id="side">
-                            <img src="image/pizza.png" width = "150">
-                            </div>
-                        <div id="side">
-                                <img src="image/jnt.jpg" width = "220">
-                                </div>
-                            <div id="side">
-                                    <img src="image/Masimo_logo.jpg" width = "250">
-                                    </div>
-            </p>
-        </ol>
+                <img src="image/pizza.png" alt="Pizza Hut Logo" width="150">
+            </section>
+
+            <section class="experience-entry">
+                <h3>J&T Express</h3>
+                <p><strong>Branch:</strong> J&T Scientex</p>
+                <ul>
+                    <li>Customer Service</li>
+                    <li>Item Preparation</li>
+                    <li>Scanning</li>
+                    <li>Delivery</li>
+                </ul>
+                <img src="image/jnt.jpg" alt="J&T Logo" width="220">
+            </section>
+
+            <section class="experience-entry">
+                <h3>MASIMO</h3>
+                <p><strong>Branch:</strong> MASIMO Pasir Gudang</p>
+                <ul>
+                    <li>Operator</li>
+                </ul>
+                <img src="image/Masimo_logo.jpg" alt="MASIMO Logo" width="250">
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer id="footer">
+            &copy; 2025 Haikal. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
