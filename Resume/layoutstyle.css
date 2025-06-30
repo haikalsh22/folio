@@ -1,75 +1,67 @@
-/* Reset some basic styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Wrapper */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f7fa;
-    color: #2d3436;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Wrapper */
 #wrapper {
     max-width: 1200px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
 /* Header */
 #header {
-    background: linear-gradient(to right, #00b894, #0984e3);
+    background: linear-gradient(to right, #1e3c72, #2a5298);
     padding: 40px 20px;
     text-align: center;
     color: #fff;
+    border-bottom: 5px solid #0050c8;
 }
 
 #header h1 {
-    font-size: 3em;
-    font-weight: 600;
+    font-size: 2.5em;
 }
 
 /* Navigation */
 #navigation {
-    background-color: #2d3436;
+    background-color: #333;
 }
 
 #navigation ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     list-style: none;
-    padding: 12px 0;
+    margin: 0;
+    padding: 0;
 }
 
 #navigation li a {
-    padding: 12px 24px;
+    padding: 14px 25px;
+    display: block;
     color: #fff;
     text-decoration: none;
-    font-weight: 500;
+    border-right: 1px solid #555;
     transition: background 0.3s ease;
-    border-radius: 5px;
 }
 
-#navigation li + li {
-    margin-left: 10px;
+#navigation li:last-child a {
+    border-right: none;
 }
 
 #navigation li a:hover {
-    background-color: #636e72;
+    background-color: #444;
 }
 
-/* Content Layout */
+/* Layout */
 #content-container {
     display: flex;
     flex-wrap: wrap;
     padding: 30px;
-    background-color: #ffffff;
 }
 
 #main {
@@ -79,79 +71,100 @@ body {
 
 #main h2 {
     font-size: 1.8em;
-    color: #0984e3;
     margin-bottom: 15px;
 }
 
 #side {
-    flex: 1 1 30%;
+    flex: 1 1 35%;
     padding: 20px;
-    background-color: #f1f2f6;
+    background-color: #f9f9f9;
     margin-left: 5%;
-    border-radius: 8px;
+    border-left: 2px solid #ccc;
 }
 
-#side h3 {
-    font-size: 1.4em;
-    margin-bottom: 10px;
-    color: #00b894;
+#side h2 {
+    margin-bottom: 15px;
 }
 
-/* Table Styles */
+/* Tables & Lists */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
-table thead {
-    background-color: #dfe6e9;
+thead {
+    background-color: #eee;
 }
 
-table th,
-table td {
-    padding: 12px;
+th, td {
     border: 1px solid #ccc;
-    text-align: left;
+    padding: 10px;
+    vertical-align: top;
 }
 
-table tr:hover {
-    background-color: #f1f2f6;
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Media */
+canvas,
+video,
+audio,
+iframe,
+object,
+svg {
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Canvas Specific */
+.bordered-canvas {
+    border: 1px solid #000;
+}
+
+/* Drag-and-Drop */
+#div1 {
+    width: 300px;
+    height: 250px;
+    border: 2px dashed #555;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Footer */
 #footer {
-    background: #2d3436;
-    text-align: center;
+    background-color: #333;
+    color: #fff;
+    text-align: right;
     padding: 20px;
     font-size: 0.9em;
-    color: #dfe6e9;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
     #content-container {
         flex-direction: column;
     }
 
-    #main,
-    #side {
+    #main, #side {
         flex: 1 1 100%;
         margin-left: 0;
     }
 
     #navigation ul {
         flex-direction: column;
-        align-items: center;
-    }
-
-    #navigation li + li {
-        margin-left: 0;
-        margin-top: 8px;
     }
 
     #navigation li a {
-        width: 100%;
-        text-align: center;
+        border-right: none;
+        border-bottom: 1px solid #555;
     }
 }
