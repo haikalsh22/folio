@@ -1,16 +1,22 @@
-<html><head>
-    <title>Resume </title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume | JavaScript Project</title>
     <link rel="stylesheet" href="layoutstyle.css" type="text/css">
-   
-</head><body>
-        <div id="wrapper"> 
-        <div id="header"> 
-    <h1>JavaScript Project</h1>
-            </div>
-            </div>
-     <hr style="width: 100%; height: 2px;">
-            <div id="navigation">
-        <ul>       
+    <script src="js/script.js" defer></script> <!-- external JS file -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Header -->
+        <header id="header">
+            <h1>JavaScript Project</h1>
+        </header>
+
+        <!-- Navigation -->
+        <nav id="navigation">
+            <ul>
                 <li><a href="index.html">About Me</a></li>
                 <li><a href="education.html">Education</a></li>
                 <li><a href="experience.html">Experience</a></li>
@@ -19,88 +25,115 @@
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="project.html">Past Project</a></li>
                 <li><a href="jsproject.html">JavaScript Project</a></li>
-        </ul>
-    </div>
-        
-    <div id="content-container">
-        <div id="main">
-        <h2>Change to Upper Case</h2>
-        <br>Type something here : <input type="text" id="str_input" onkeyup="changeToUpper()">
-                    
-        <h2><br>Date Countdown</h2>
-                           <br>Type the coming date you waiting for :
-                            <input type="date" id="date_str" onchange="dateCount()">
-                            <h3 id="output"></h3>
-                          
-        <h2><br>Country Flags</h2>
-                           <ul>
-                            <li onmouseover="showFlag('Malaysia')">Malaysia</li>
-                            <li onmouseover="showFlag('UK')">UK</li>   
-                            <li onmouseover="showFlag('Japan')">Japan</li>
-                            <li onmouseover="showFlag('Indonesia')">Indonesia</li>
-                            <li onmouseover="showFlag('Brazil')">Brazil</li>   
-                     </ul>
-                     <div id="flag_div"></div>
-                     <script src="js/script.js"></script>
-            
-                     <ol><li>
-                        <h3>Grade Calculator<h3>
-                    </li>
-                    Enter number of course:
-                    <input type="number" id="textNum">
-                    <button onclick="addCourse()">Submit</button>
-                    
-                    <div id="listCourse"></div>
-                    
-                    <br>
-                    
-                    <button onclick="calculateGrade()">Calculate Grade</button>
-                    
-                    <div id="result"></div>
-                    
-                    <script>
-                    function addCourse() {
-                      var txt = "";
-                      var num_of_course = parseInt(document.getElementById("textNum").value);
-                      var i;
-                      for (i = 0; i < num_of_course; i++) {
-                        txt += '<p><input type="text" placeholder="Course name" class="courseName"> ' +
-                               '<input type="number" placeholder="Marks" class="courseMark"></p>';
-                      }
-                      document.getElementById("listCourse").innerHTML = txt;
-                    }
-                    
-                    function calculateGrade() {
-                      var marks = document.getElementsByClassName("courseMark");
-                      var total = 0;
-                      var i;
-                      for (i = 0; i < marks.length; i++) {
-                        total += parseFloat(marks[i].value);
-                      }
-                      
-                      var average = total / marks.length;
-                      var grade = "";
-                    
-                      if (average >= 90) {
-                        grade = "A";
-                      } else if (average >= 80) {
-                        grade = "B";
-                      } else if (average >= 70) {
-                        grade = "C";
-                      } else if (average >= 60) {
-                        grade = "D";
-                      } else {
-                        grade = "F";
-                      }
-                    
-                      document.getElementById("result").innerHTML = 
-                        "<h3>Average Marks: " + average.toFixed(2) + "<br>Grade: " + grade + "</h3>";
-                    }
-                    </script>
-</p>
-           
-                    
+            </ul>
+        </nav>
 
-                    </ol>
-        </div>
-                            
+        <!-- Main Content -->
+        <main id="main">
+            <!-- Project 1: Uppercase Converter -->
+            <section>
+                <h2>Change to Upper Case</h2>
+                <p>Type something here: 
+                    <input type="text" id="str_input" onkeyup="changeToUpper()">
+                </p>
+            </section>
+
+            <!-- Project 2: Date Countdown -->
+            <section>
+                <h2>Date Countdown</h2>
+                <p>Type the coming date you're waiting for:</p>
+                <input type="date" id="date_str" onchange="dateCount()">
+                <h3 id="output"></h3>
+            </section>
+
+            <!-- Project 3: Country Flags -->
+            <section>
+                <h2>Country Flags</h2>
+                <ul>
+                    <li onmouseover="showFlag('Malaysia')">Malaysia</li>
+                    <li onmouseover="showFlag('UK')">UK</li>
+                    <li onmouseover="showFlag('Japan')">Japan</li>
+                    <li onmouseover="showFlag('Indonesia')">Indonesia</li>
+                    <li onmouseover="showFlag('Brazil')">Brazil</li>
+                </ul>
+                <div id="flag_div"></div>
+            </section>
+
+            <!-- Project 4: Grade Calculator -->
+            <section>
+                <h2>Grade Calculator</h2>
+                <p>Enter number of courses:</p>
+                <input type="number" id="textNum">
+                <button onclick="addCourse()">Submit</button>
+                <div id="listCourse"></div>
+                <br>
+                <button onclick="calculateGrade()">Calculate Grade</button>
+                <div id="result"></div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer id="footer">
+            &copy; 2025 Muhammad Haikal. All rights reserved.
+        </footer>
+    </div>
+
+    <!-- Inline JS (only if needed, better to move to js/script.js) -->
+    <script>
+        function changeToUpper() {
+            const input = document.getElementById("str_input");
+            input.value = input.value.toUpperCase();
+        }
+
+        function dateCount() {
+            const dateStr = document.getElementById("date_str").value;
+            const targetDate = new Date(dateStr);
+            const today = new Date();
+            const diff = targetDate - today;
+            const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+            document.getElementById("output").textContent =
+                days >= 0 ? `Remaining: ${days} day(s)` : "The date has passed!";
+        }
+
+        function showFlag(country) {
+            const flags = {
+                Malaysia: "https://flagcdn.com/my.svg",
+                UK: "https://flagcdn.com/gb.svg",
+                Japan: "https://flagcdn.com/jp.svg",
+                Indonesia: "https://flagcdn.com/id.svg",
+                Brazil: "https://flagcdn.com/br.svg"
+            };
+            document.getElementById("flag_div").innerHTML = 
+                `<img src="${flags[country]}" alt="${country} Flag" width="200">`;
+        }
+
+        function addCourse() {
+            const num = parseInt(document.getElementById("textNum").value);
+            let html = '';
+            for (let i = 0; i < num; i++) {
+                html += `<p>
+                            <input type="text" placeholder="Course Name" class="courseName">
+                            <input type="number" placeholder="Marks" class="courseMark">
+                         </p>`;
+            }
+            document.getElementById("listCourse").innerHTML = html;
+        }
+
+        function calculateGrade() {
+            const marks = document.getElementsByClassName("courseMark");
+            let total = 0;
+            for (let i = 0; i < marks.length; i++) {
+                total += parseFloat(marks[i].value) || 0;
+            }
+            const average = total / marks.length;
+            let grade = "F";
+            if (average >= 90) grade = "A";
+            else if (average >= 80) grade = "B";
+            else if (average >= 70) grade = "C";
+            else if (average >= 60) grade = "D";
+            document.getElementById("result").innerHTML =
+                `<h3>Average Marks: ${average.toFixed(2)}<br>Grade: ${grade}</h3>`;
+        }
+    </script>
+</body>
+</html>
