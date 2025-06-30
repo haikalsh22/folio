@@ -9,7 +9,8 @@
     <div id="wrapper">
         <!-- Header -->
         <header id="header">
-            <h1>Experience</h1>
+            <h1>My Work Experience</h1>
+            <p class="subtitle">Professional history and responsibilities I've taken on</p>
         </header>
 
         <!-- Navigation -->
@@ -17,7 +18,7 @@
             <ul>
                 <li><a href="index.html">About Me</a></li>
                 <li><a href="education.html">Education</a></li>
-                <li><a href="experience.html">Experience</a></li>
+                <li><a href="experience.html" class="active">Experience</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="activities.html">Activities</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -28,46 +29,65 @@
 
         <!-- Main Content -->
         <main id="main">
-            <h2>This is my experience details:</h2>
+            <section>
+                <h2>Experience Overview</h2>
+                <p class="section-description">Below are some of the professional positions I've worked in, covering customer service, logistics, and manufacturing roles.</p>
 
-            <section class="experience-entry">
-                <h3>Pizza Hut Malaysia</h3>
-                <p><strong>Branch:</strong> Pizza Hut Delivery Dahlia</p>
-                <ul>
-                    <li>Customer Service</li>
-                    <li>Food Preparation</li>
-                    <li>Cleaning and Maintenance</li>
-                    <li>Delivery</li>
-                    <li>Cashier</li>
-                </ul>
-                <img src="image/pizza.png" alt="Pizza Hut Logo" width="150">
-            </section>
+                <!-- Experience Entries -->
+                <div class="experience-grid">
 
-            <section class="experience-entry">
-                <h3>J&T Express</h3>
-                <p><strong>Branch:</strong> J&T Scientex</p>
-                <ul>
-                    <li>Customer Service</li>
-                    <li>Item Preparation</li>
-                    <li>Scanning</li>
-                    <li>Delivery</li>
-                </ul>
-                <img src="image/jnt.jpg" alt="J&T Logo" width="220">
-            </section>
+                    <!-- Pizza Hut -->
+                    <div class="experience-card">
+                        <img src="image/pizza.png" alt="Pizza Hut Logo" class="company-logo">
+                        <div class="experience-content">
+                            <h3>Pizza Hut Malaysia</h3>
+                            <p><strong>Branch:</strong> Pizza Hut Delivery Dahlia</p>
+                            <ul>
+                                <li>Customer Service (call-in and walk-in)</li>
+                                <li>Food Preparation and Packaging</li>
+                                <li>Store Cleaning & Sanitation</li>
+                                <li>Delivery Coordination</li>
+                                <li>Cashier & POS Operations</li>
+                            </ul>
+                        </div>
+                    </div>
 
-            <section class="experience-entry">
-                <h3>MASIMO</h3>
-                <p><strong>Branch:</strong> MASIMO Pasir Gudang</p>
-                <ul>
-                    <li>Operator</li>
-                </ul>
-                <img src="image/Masimo_logo.jpg" alt="MASIMO Logo" width="250">
+                    <!-- J&T -->
+                    <div class="experience-card">
+                        <img src="image/jnt.jpg" alt="J&T Logo" class="company-logo">
+                        <div class="experience-content">
+                            <h3>J&T Express</h3>
+                            <p><strong>Branch:</strong> J&T Scientex, Johor</p>
+                            <ul>
+                                <li>Customer Front Desk Handling</li>
+                                <li>Parcel Scanning & Labeling</li>
+                                <li>Delivery Scheduling & Dispatch</li>
+                                <li>Sorting & Loading Operations</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- MASIMO -->
+                    <div class="experience-card">
+                        <img src="image/Masimo_logo.jpg" alt="MASIMO Logo" class="company-logo">
+                        <div class="experience-content">
+                            <h3>MASIMO Corporation</h3>
+                            <p><strong>Branch:</strong> Masimo Pasir Gudang</p>
+                            <ul>
+                                <li>Assembly Line Operator</li>
+                                <li>Medical Equipment Quality Check</li>
+                                <li>Precision Handling & Component Testing</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
             </section>
         </main>
 
         <!-- Footer -->
         <footer id="footer">
-            &copy; 2025 Haikal. All rights reserved.
+            &copy; 2025 Muhammad Haikal. All rights reserved.
         </footer>
     </div>
 </body>
